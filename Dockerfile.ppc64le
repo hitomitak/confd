@@ -1,0 +1,5 @@
+FROM ppc64le/golang:1.7.3
+RUN  mkdir -p /go/src/github.com/kelseyhightower/confd
+RUN apt-get update
+RUN apt-get install -y build-essential libc6-dev
+WORKDIR /go/src/github.com/kelseyhightower/confd
