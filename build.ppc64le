@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+PWD=`pwd`
+docker build -t confd_build - < Dockerfile.ppc64le 
+docker run -i -v $PWD:/go/src/github.com/kelseyhightower/confd -t confd_build bash build.ppc64le.compile 
+
+
